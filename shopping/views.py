@@ -410,7 +410,7 @@ def edit_item_quantity(request, operation, pk):
 
         purchase_item = PurchasedItems(
                 user = request.user,
-                item = edit_item.item,
+                item = edit_item.item.capitalize(),
                 quantity = 1,
                 category = edit_item.category, 
             )

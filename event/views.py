@@ -252,10 +252,6 @@ def oauth_2_call_back(request):
                 'dateTime': '{}T00:00:00-{}'.format(event_date, event_end_time),
                 'timeZone': "Europe/London",
             },
-            'attendees': [
-                {'email': 'lpage@example.com'},
-                {'email': 'sbrin@example.com'},
-            ],
             'reminders': {
                 'useDefault': False,
                 'overrides': [
