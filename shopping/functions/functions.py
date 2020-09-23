@@ -186,7 +186,6 @@ def get_dates_for_monthly_report():
     users_start_day = users_start_date[8:10]
     users_start_date = date(int(users_start_year), int(users_start_month), int(users_start_day))
     todays_date = date.today()
-    print(users_start_date, todays_date)
     time_between = todays_date - users_start_date
     months_between_start_date_and_now = []
 

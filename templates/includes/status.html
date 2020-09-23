@@ -15,23 +15,27 @@
                     {% else %}
                     <img src="{{ MEDIA_URL }}user-image.png" class="user-image-status float-left mr-3">
                     {% endif %}
-                    {% if news.user == user %}
-                    <h6>{{ news.user.first_name }} {{ news.user.last_name }}
-                        <div class="dropdown">
-                            <a class="icon-button float-right mr-4 dropdown-toggle" type="button"
-                                id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" data-offset="10,20">
-                                <img src="{{ MEDIA_URL }}icons/delete_icon.png" />
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                <h6 class="text-center">Are you sure?</h6>
-                                <a class="dropdown-item" href="/status/update_status/remove/{{news.id}}/profile">Remove
-                                    Status</a>
-                            </div>
-                        </div>
-                    </h6>
-                    {% endif %}
                 </a>
+                <div class="d-flex justify-content-between">
+                    <a href="/user/view_user_profile/{{news.user.id}}" class="text-dark">
+                        <h6>{{ news.user.first_name }} {{ news.user.last_name }}</h6>
+                    </a>
+                    {% if news.user == user %}
+                    <div class="dropdown">
+                        <a class="icon-button float-right mr-4 dropdown-toggle" type="button" id="dropdownMenuOffset"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                            <img src="{{ MEDIA_URL }}icons/delete_icon.png" />
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <h6 class="text-center">Are you sure?</h6>
+                            <a class="dropdown-item" href="/status/update_status/remove/{{news.id}}/profile">Remove
+                                Status</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+
                 <h6 class="text-secondary">{{ news.title }}</h6>
             </div>
             <div class="col-12 mb-3 mt-2">

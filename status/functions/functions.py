@@ -37,8 +37,6 @@ def get_news_feed(request):
     # Sort all status by data
     news_feed = sorted(news_feed, key = lambda x: x.created_date, reverse=True)
 
-    print(news_feed)
-
     return news_feed
 
 def create_comment_and_status_notification(request, pk):
@@ -84,7 +82,6 @@ def add_like_and_notification(request, pk):
         status.liked_by.add(request.user)
         status.likes = status.likes + 1
         status.save()
-        print('like post')
 
         # Send a notification to the status owner to tell them their status has been liked on.
         try:
@@ -105,7 +102,6 @@ def add_like_and_notification(request, pk):
         status.liked_by.remove(request.user)
         status.likes = status.likes - 1
         status.save()
-        print('unlike post')
 
     return None
 
