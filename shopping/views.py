@@ -441,6 +441,7 @@ def edit_item_quantity(request, operation, pk):
                 form = ItemForm(request.POST)
                 if form.is_valid():
                     item_form = form.save(commit=False)
+                    item_form.item = item_form.item.capitalize()
                     item_form.category = category
                     item_form.user = request.user
                     item_form.save()
