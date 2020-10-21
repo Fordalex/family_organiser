@@ -4,6 +4,9 @@
 
 This web application is designed to keep users in touch with their family and allow them to book events, share shopping lists, work together getting chores done, as well as write status and message one another. This idea came to me as in my house remembering to put the bins out and always running out of milk was getting a bit of a problem. I wanted to find a solution but one that I wasn't just in control of, as 'Teamwork makes the dream work', Adding API's and google authentication to speed up the user's interaction with the site was important as we're all short on time.
 
+Please view my project by the link below:
+[Family Organiser](https://family-organiser.herokuapp.com/)
+
 ## UX
 
 The overall app theme is green and white with hand drawn icons, I have tried to animate most of the intractions with the application but not to affect loading times. I feel this helps navigate the user to the desiered location and elicit a positive emotional response, making sure the user finds it easy to find their desired impormation and enjoy the process was quite important.
@@ -245,15 +248,15 @@ Then I've added the access key and the secret access key to the settings.py file
 #### Running This Project Locally
 
 - Frontend Method (Download)
-    1. Go to [Family Organiser Project](https://github.com/Fordalex/power-in-numbers)
-    2. Click on
+    1. Go to [Family Organiser Project](https://github.com/Fordalex/family_organiser)
+    2. Click on the code buton at the top of the page.
     3. Click download zip
     4. Extract zip file
     5. Import into preferred IDE
 
 - backend Method (Git)
     1. Open your terminal in your preferred IDE.
-    2. Type "git clone https://github.com/Fordalex/power-in-numbers".
+    2. Type "git clone https://github.com/Fordalex/family_organiser".
     3. A Virutal environment will need to be created, if your using linux the following command is 'python3 -m venv .venv'.
     4. Then 'source .venv/bin/activate' to activate the environment.
     5. The following command will install the dependencies for this project 'pip install -r requirements.txt'.
